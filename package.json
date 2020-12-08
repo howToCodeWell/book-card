@@ -1,5 +1,5 @@
 {
-  "name": "book-card",
+  "name": "@howtocodewell/book-card",
   "version": "1.0.0",
   "description": "Book Card",
   "main": "index.js",
