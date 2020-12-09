@@ -14,30 +14,39 @@ var _SimpleImageGridItem = _interopRequireDefault(require("./SimpleImageGridItem
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var SimpleImageGrid = function SimpleImageGrid(_ref) {
-  var items = _ref.items;
+  var items = _ref.items,
+      header = _ref.header;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "-ml-4 -mr-4 -mb-4 p-4 bg-gray-500 border-t "
-  }, /*#__PURE__*/_react["default"].createElement("div", {
+  }, header.isEnabled && /*#__PURE__*/_react["default"].createElement("div", {
     className: "text-center"
   }, /*#__PURE__*/_react["default"].createElement("h1", {
     className: "text-black "
-  }, "Programming resources"), /*#__PURE__*/_react["default"].createElement("a", {
-    href: "/books",
+  }, header.title), /*#__PURE__*/_react["default"].createElement("a", {
+    href: header.link.url,
     className: " text-sm mt-2 text-black hover:text-white hover:no-underline"
-  }, "(See all)")), /*#__PURE__*/_react["default"].createElement("div", {
+  }, header.link.text)), /*#__PURE__*/_react["default"].createElement("div", {
     className: "container mx-auto px-4 pb-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "no-flex flex justify-center flex-wrap"
   }, items.map(function (item, index) {
     return /*#__PURE__*/_react["default"].createElement(_SimpleImageGridItem["default"], {
-      book: item,
+      item: item,
       key: index
     });
   }))));
 };
 
 SimpleImageGrid.propTypes = {
-  items: _propTypes["default"].array.isRequired
+  items: _propTypes["default"].array.isRequired,
+  header: _propTypes["default"].shape({
+    isEnabled: _propTypes["default"].bool.isRequired,
+    title: _propTypes["default"].string,
+    link: _propTypes["default"].shape({
+      url: _propTypes["default"].string,
+      text: _propTypes["default"].string
+    })
+  }).isRequired
 };
 var _default = SimpleImageGrid;
 exports["default"] = _default;
