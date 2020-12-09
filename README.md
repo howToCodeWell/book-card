@@ -3,5 +3,5 @@ Display an image of a book with link
 
 ## Install
 ```
-npm install @howtocodewell/book-card
+npm install @howtocodewell/simple-image-grid
 ```
