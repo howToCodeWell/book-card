@@ -10,7 +10,7 @@ npm install @howtocodewell/simple-image-grid
 
 const items = [
     {
-      links: {
+      link: {
         title: "Foo",
         target: "_blank",
         url: "https://www.howtocodewell.net"
@@ -22,7 +22,7 @@ const items = [
       }
     },
     {
-      links: {
+      link: {
         title: "Foo",
         target: "_blank",
         url: "https://www.howtocodewell.net"
@@ -47,6 +47,8 @@ const header = {
 
 ## Usage
 ```javascript
-import { SimpleImageGrid } from '@howtocodewell/simple-image-grid/src'
-<SimpleImageGrid items={items} header={header}/>
+import { SimpleImageGrid } from '@howtocodewell/simple-image-grid'
+
+<SimpleImageGrid items={items} header={header} />
+
 ```
