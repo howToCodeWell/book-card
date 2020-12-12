@@ -1,6 +1,6 @@
 {
   "name": "@howtocodewell/simple-image-grid",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Simple Image Grid",
   "main": "index.js",
   "scripts": {
