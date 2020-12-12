@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SimpleImageGrid from './Components/SimpleImageGrid'
 
-const items = [
+const itemConfig = [
     {
         link: {
             title: "PHP Array Chunk",
@@ -29,7 +29,7 @@ const items = [
     },
 ]
 
-const header = {
+const headerConfig = {
     isEnabled: true,
     title: 'PHP Tutorials',
     link: {
@@ -40,7 +40,7 @@ const header = {
 
 ReactDOM.render(
     <React.StrictMode>
-      <SimpleImageGrid items={items} header={header} />
+      <SimpleImageGrid items={itemConfig} header={headerConfig} />
     </React.StrictMode>,
     document.getElementById('root')
 );
