@@ -1,4 +1,9 @@
 # Simple Image Grid React Component
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/howtocodewell/simple-image-grid)
+![GitHub issues](https://img.shields.io/github/issues/howtocodewell/simple-image-grid)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/howtocodewell/simple-image-grid)
+![Twitter Follow](https://img.shields.io/twitter/follow/howtocodewell)
+
 This component displays a grid of linkable images.
 It is used as part of [https://howtocodewell](https://howtocodewell])
 
