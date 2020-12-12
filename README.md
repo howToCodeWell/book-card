@@ -16,7 +16,11 @@ To see an example of the component run
 ```bash
 $ npm start
 ```
-
+## Test
+To test the component
+```bash
+$ npm  test
+```
 
 ## Configuration
 ```javascript
