@@ -2,6 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import SimpleImageGrid from '../Components/SimpleImageGrid'
 import '@testing-library/jest-dom/extend-expect'
+import SimpleImageGridItem from '../Components/SimpleImageGridItem'
 
 test('loads image grid', () => {
   const itemConfig = [
@@ -28,5 +29,4 @@ test('loads image grid', () => {
   expect(screen.getByRole('heading')).toHaveTextContent(headerConfig.title)
   const links = screen.getAllByRole('link')
   expect(links[0]).toHaveTextContent(headerConfig.link.text)
-  expect(links[0]).toHaveAttribute('href', headerConfig.link.url)
 })

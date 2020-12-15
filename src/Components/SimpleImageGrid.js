@@ -2,20 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SimpleImageGridItem from './SimpleImageGridItem'
 
-const SimpleImageGrid = ({ items, header }) => (
-  <div className="-ml-4 -mr-4 -mb-4 p-4 bg-gray-500 border-t ">
+const defaultCSSConfig = {
+  gridParentContainer: 'grid-parent-container',
+  titleContainer: 'title-container',
+  title: 'title',
+  titleLink: 'title-link',
+  gridContainer: 'grid-container',
+  gridItemsContainer: 'grid-items-container',
+}
+
+
+const SimpleImageGrid = ({ items, header, cssConfig = defaultCSSConfig, cssGridItemConfig }) => (
+  <div className={cssConfig.gridParentContainer}>
     {header.isEnabled && (
-      <div className="text-center">
-        <h1 className="text-black ">{header.title}</h1>
-        <a href={header.link.url}
-           className=" text-sm mt-2 text-black hover:text-white hover:no-underline">{header.link.text}</a>
+      <div className={cssConfig.titleContainer}>
+        <h1 className={cssConfig.title}>{header.title}</h1>
+        <a href={header.link.url} className={cssConfig.titleLink}>{header.link.text}</a>
       </div>
     )}
 
-    <div className="container mx-auto px-4 pb-8">
-      <div className="no-flex flex justify-center flex-wrap">
+    <div className={cssConfig.gridContainer}>
+      <div className={cssConfig.gridItemsContainer}>
         {items.map(function (item, index) {
-          return <SimpleImageGridItem item={item} key={index}/>
+          return <SimpleImageGridItem item={item} key={index} cssConfig={cssGridItemConfig}/>
         })}
       </div>
     </div>
@@ -31,7 +40,7 @@ SimpleImageGrid.propTypes = {
       url: PropTypes.string,
       text: PropTypes.string
     })
-  }).isRequired
+  }).isRequired,
 }
 
 export default SimpleImageGrid
